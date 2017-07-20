@@ -10,7 +10,7 @@ function getParams(name){
         return null;
     };
 }
-//从url中获取参数
+
 var val=getParams("name");
 if(val!=null){
     console.log('url中字段为 name 的参数值为，'val)
