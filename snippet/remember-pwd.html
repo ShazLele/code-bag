@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="./static/jquery.cookie.js"></script>
+
+</head>
+<body>
+<input type="text" id="Account">
+<input type="password" id="Password">
+<input type="checkbox" id="rememberPwd">
+
+</body>
+<script>
 //前端使用cookie实现记住密码
 
 //初始加载判断是否记住密码
@@ -23,3 +39,6 @@
             $.cookie('accountInfo',null);
         }
     }
+
+</script>
+</html>
