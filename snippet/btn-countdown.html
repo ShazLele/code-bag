@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <button id="countdown">10秒倒计时开始</button>
+</body>
+<script>
+$("#countdown").off().on("click",function(){
+    $("#countdown").attr("disabled", "true");
+    var timer = 10;
+    times();
+    function times() {
+        if (timer == 0) {
+            clearTimeout(timerFun);
+            $("#countdown").removeAttr('disabled').html('10秒倒计时开始');
+            timer = 10;
+        } else {
+            $("#countdown").html( timer + ' 秒');
+            timer--;
+            var timerFun = function () {
+                times();
+            };
+            setTimeout(timerFun, 1000)
+        }
+    }
+})
+
+</script>
+</html>
